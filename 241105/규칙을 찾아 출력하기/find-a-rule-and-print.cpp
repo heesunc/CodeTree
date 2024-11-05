@@ -7,14 +7,19 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            // 첫 번째 줄, 마지막 줄, 또는 열 번호가 줄 번호보다 작으면 별 출력
-            if (i == 0 || i == n - 1 || j <= i) {
+            // n이 1 이하일 때는 단순히 '*' 하나만 출력
+            if (n <= 1) {
                 cout << "* ";
             } else {
-                cout << "  ";
+                // i와 j가 모두 0이 아니고, n-1도 아니며, i <= j인 경우 공백 출력
+                if (i != 0 && j != 0 && i != n - 1 && j != n - 1 && i <= j) {
+                    cout << "  ";
+                } else {
+                    cout << "* ";
+                }
             }
         }
-        cout << endl;
+        cout << endl; // 줄 바꿈
     }
 
     return 0;
