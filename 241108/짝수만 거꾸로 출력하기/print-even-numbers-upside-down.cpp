@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -16,6 +17,8 @@ int main() {
             a.push_back(b);
         } 
     }
+
+    reverse(a.begin(), a.end());
 
     for(int i : a)
     {
