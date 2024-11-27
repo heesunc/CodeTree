@@ -26,11 +26,11 @@ int main() {
     int a, c; char o;
     cin >> a >> o >> c;
 
-    cout << a << " " << o << " " << c << " = ";
-    if (o == '+') cout << sum(a,c);
-    else if (o == '-') cout << sub(a,c);
-    else if (o == '/') cout << div2(a,c);
-    else if (o == '*') cout << mul(a,c);
+    
+    if (o == '+') cout << a << " " << o << " " << c << " = " << sum(a,c);
+    else if (o == '-') cout << a << " " << o << " " << c << " = " << sub(a,c);
+    else if (o == '/') cout << a << " " << o << " " << c << " = " << div2(a,c);
+    else if (o == '*') cout << a << " " << o << " " << c << " = " << mul(a,c);
     else cout << "False";
 
     return 0;
